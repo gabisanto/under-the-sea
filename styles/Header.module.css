@@ -1,0 +1,49 @@
+.header {
+    background-image: linear-gradient(to right,rgb(0 0 0 / .4),rgb(0 0 0 / .7)),url(../public/img/Sunday-Reading-Under-the-Sea.jpg);
+    padding: 5rem 0;
+    background-size: cover;
+    background-position: 50%;
+
+}
+
+.upperBar {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+@media(min-width:768px) {
+    .upperBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+.navigation {
+    margin-top: 5rem;
+    display:flex;
+    gap:2rem;
+}
+
+@media(min-width:768px) {
+    .navigation {
+        margin-top: 0;
+    }
+
+}
+
+.navigation a {
+    color:var(--white);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight:700;
+    text-transform: uppercase;
+    padding:.5rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.navigation a:hover{
+    background-color: var(--primary);
+}

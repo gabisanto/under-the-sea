@@ -1,0 +1,8 @@
+I will start adding notes here as I go in the project, important things I don't wanna miss the next time. Just for reference!!
+
+Created the project through npx create-next-app project-name --use-npm
+
+Added babelrc and modified eslintrc so there wouldn't show an error in _app.js (the project still compiled fine, but vsc said there was an error)
+Reference: https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
+
+Image component! Look up more on it

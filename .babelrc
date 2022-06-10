@@ -1,0 +1,6 @@
+//had to add this code to avoid the error in pages
+
+{
+    "presets": ["next/babel"],
+    "plugins": []
+  }

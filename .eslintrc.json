@@ -1,3 +1,9 @@
+// {
+//   "extends": "next/core-web-vitals"
+// }
+
+//had to add this code to avoid the error in pages
+
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/babel","next/core-web-vitals"]
 }
