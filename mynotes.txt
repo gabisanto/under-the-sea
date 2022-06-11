@@ -6,3 +6,7 @@ Added babelrc and modified eslintrc so there wouldn't show an error in _app.js (
 Reference: https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
 
 Image component! Look up more on it
+
+Strapi. Installed yarn globally and @strapi/design-system in the project reference https://github.com/strapi/strapi/issues/11729. My node is v14. Custom install, default db mongo. Remember the db is the one provided by mongo atlas. Connect - connect your application - mongodb+srv://gabisanto:<password>@//COPY FROM HERE//cluster0.dekmlih.mongodb.net//TO HERE///?retryWrites=true&w=majority Followed instructions after install, using yarn develop.
+
+Installed mongodb compass. New connection, copy paste the connection string from mongo REMEMBER TO ADD THE PASSWORD
