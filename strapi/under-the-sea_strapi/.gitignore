@@ -112,6 +112,9 @@ exports
 *.cache
 build
 .strapi-updater.json
+<<<<<<< HEAD
 config
 config/database.js
 config/server.js
+=======
+>>>>>>> c06cda9a932de1461fe188ac8088ea639df884ee
