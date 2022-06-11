@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/strapi/under-the-sea_strapi/config
 
 # testing
 /coverage
