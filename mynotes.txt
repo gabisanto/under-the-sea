@@ -19,3 +19,9 @@ Add in next.config.js
 images: {
     domains: ["res.cloudinary.com"],
   }
+
+env.local when in server side you can name it however you want but for client side, it's line 2 (NEXT_PUBLIC_ETC)
+
+npm run dev
+yarn develop
+mongo db compass
