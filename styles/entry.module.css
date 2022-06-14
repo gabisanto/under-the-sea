@@ -40,3 +40,13 @@
     -webkit-line-clamp: 4;
     overflow: hidden
 }
+
+.entry{
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.text {
+    white-space: pre-wrap;
+}

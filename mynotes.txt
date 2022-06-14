@@ -5,7 +5,13 @@ Created the project through npx create-next-app project-name --use-npm
 Added babelrc and modified eslintrc so there wouldn't show an error in _app.js (the project still compiled fine, but vsc said there was an error)
 Reference: https://stackoverflow.com/questions/68163385/parsing-error-cannot-find-module-next-babel
 
-Image component! Look up more on it
+Image component! Look up more on it. Solution to irregular image sizing
+<Image layout="responsive" width='100%' height='100%' objectFit='contain' src={image.url} alt={`Image for entry "${title}"`}/>
+Reference https://dev.to/tanahmed/next-image-make-image-fill-available-space-272o comment section. This worked but not so well because it did funky things to the container.
+HOWEVER always go to documentation! Since I was already importing the image element in the api, I can make the height and width dynamic!
+ width={image.width} height={image.height} let's goo
+Read more https://nextjs.org/docs/basic-features/image-optimization
+
 
 Strapi. Installed yarn globally and @strapi/design-system in the project reference https://github.com/strapi/strapi/issues/11729. My node is v14. Custom install, default db mongo. Remember the db is the one provided by mongo atlas. Connect - connect your application - mongodb+srv://gabisanto:<password>@//COPY FROM HERE//cluster0.dekmlih.mongodb.net//TO HERE///?retryWrites=true&w=majority Followed instructions after install, using yarn develop.
 
@@ -24,4 +30,4 @@ env.local when in server side you can name it however you want but for client si
 
 npm run dev
 yarn develop
-mongo db compass
+mongo db compass remember to update ip if rebooting or disconnecting
