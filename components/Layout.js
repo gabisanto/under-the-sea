@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({children,page}) => {
+const Layout = ({children,page,productHeader}) => {
   return (
 <div>
     <Head>
@@ -14,7 +14,10 @@ const Layout = ({children,page}) => {
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" /> 
       </Head>
 
-    <Header/>
+    <Header
+        productHeader={productHeader}
+    
+    />
 
       {children}
 
@@ -27,6 +30,12 @@ const Layout = ({children,page}) => {
     </a>
       </div>
   )
+}
+
+// doing this because otherwise in non index elements, productHeader is undefined (I only passed the productHeader to layout and header through index)
+
+Layout.defaultProps = {
+  productHeader: null
 }
 
 export default Layout

@@ -1,8 +1,10 @@
 import Link from "next/link"
 import styles from '../styles/Header.module.css'
 import Image from "next/image"
+import {useRouter} from 'next/router'
 
-const Header = () => {
+const Header = ({productHeader}) => {
+  const router = useRouter()
   return (
     <header className={styles.header}>
         <div className="contenedor">
@@ -26,7 +28,24 @@ const Header = () => {
             
             </nav>
             </div>
+            {productHeader && (
+              <div className={styles.productHeader}>
+                <h2>{productHeader.name}</h2>
+                <p>{productHeader.description}</p>
+                <p className={styles.price}>$ {productHeader.price}</p>
+                <Link href={`/items/${productHeader.url}`}>
+                  <a className={styles.link}>
+                    View product
+                  </a>
+                
+                </Link>
+              </div>
+            )}
         </div>
+
+        {router.pathname === '/' && (
+          <img className={styles.imgProduct} src={productHeader.image.url} />
+        )}
     </header>
   )
 }

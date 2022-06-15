@@ -1,8 +1,9 @@
 .header {
-    background-image: linear-gradient(to right,rgb(0 0 0 / .4),rgb(0 0 0 / .7)),url(../public/img/Sunday-Reading-Under-the-Sea.jpg);
+    background-image: linear-gradient(to right,rgb(0 0 0 / .6),rgb(0 0 0 / .9)),url(../public/img/Sunday-Reading-Under-the-Sea.jpg);
     padding: 5rem 0;
     background-size: cover;
     background-position: 50%;
+    position:relative
 
 }
 
@@ -24,6 +25,8 @@
     margin-top: 5rem;
     display:flex;
     gap:2rem;
+    position:relative;
+    z-index:1
 }
 
 @media(min-width:768px) {
@@ -47,3 +50,101 @@
 .navigation a:hover{
     background-color: var(--primary);
 }
+
+.productHeader {
+    color: var(--white);
+    margin-top: 5rem;
+    text-align: center;
+    margin-left:5rem
+}
+
+@media (min-width:768px) {
+    .productHeader {
+        text-align:left;
+        width:50%
+    }
+}
+
+.productHeader h2 {
+    font-size: 6rem;
+}
+
+.productHeader p:first-of-type {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size:2.2rem
+}
+
+.price {
+    font-size: 6rem;
+    color: var(--primary);
+    font-weight: 900;
+    line-height: 0;
+}
+
+.link { 
+    margin-top: 2rem;
+    /* display: block; it doesn't look pretty taking up the whole width*/ 
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--white);
+    border: 2px solid var(--primary);
+    padding: 1rem 5rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.link:hover{
+    background-color: var(--primary);
+    color: var(--black)
+}
+
+.imgProduct {
+    display:none
+}
+
+@media (min-width:768px) {
+    .imgProduct {
+        display:block;
+        height:70vh;
+        position:absolute;
+        right:1rem;
+        bottom: 0;
+        animation-name: showImage;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@media (min-width:992px) {
+    .imgProduct {
+        display:block;
+        height: 80vh;
+        position:absolute;
+        right:5rem;
+        bottom: 0
+    }
+}
+
+@keyframes showImage {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem)
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity:1;
+        transform: translateX(0)
+    }
+}
+
