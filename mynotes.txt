@@ -31,3 +31,9 @@ env.local when in server side you can name it however you want but for client si
 npm run dev
 yarn develop
 mongo db compass remember to update ip if rebooting or disconnecting
+
+requests to apis through getServerSide etc ONLY in pages IT DOESN'T WORK in components
+
+STRAPI doesn't accept "Equipment" as valid content type??? After much frustration and thinking I was doing something wrong, a quick google search for the error shown, brought back a stackoverflow post (with no replies) where OP mentioned having trouble creating an "equipment" content type. So i tried with gear and it worked perfectly. Very strange? Reference https://stackoverflow.com/questions/69895288/status-400-bad-request-when-creating-content-type-in-strapi People have reported issues with content type starting with numbers, however "Equipment" is a regular string?
+
+UPDATE: upon further research it seems like it's a models name issue. Strapi needs words that have plural form for the models which does make sense and I hadn't thought of somehow. Equipment is indeed a noun without a plural form so it would naturally be forbidden. However Gear is also a wrong noun for this since the plural form gears means something else. So I called it Item and moved on. Reference https://github.com/strapi/strapi/issues/1198

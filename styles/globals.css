@@ -2,7 +2,7 @@
   --primary: #56cac9;
   --black: #262626;
   --white: #FFF;
-  --main-font: 'Outfit', sans-serif;
+  --fuente-principal: 'Outfit', sans-serif;
 }
 html {
   font-size: 62.5%;
@@ -13,7 +13,7 @@ html {
 }
 body {
   font-size: 2rem;
-  font-family: var(--main-font);
+  font-family: var(--fuente-principal);
   line-height: 1.5;
 }
 img {
@@ -31,4 +31,17 @@ img {
   font-weight: 900;
   color: var(--primary);
   margin: 5rem 0;
+}
+
+.github {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.github img {
+  width: 5rem;
+}
+.github img:hover {
+  cursor: pointer;
 }
